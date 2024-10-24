@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF Generator Service - README</title>
-</head>
-<body>
-
 <h1>PDF Generator Service</h1>
 
 <p>
@@ -99,12 +90,6 @@
     <li>Run the application using <code>mvn spring-boot:run</code>.</li>
 </ol>
 
-<h2>Swagger Documentation</h2>
-<p>If Swagger is enabled in the project, you can access the Swagger UI for testing the endpoints at:</p>
-<p><code>http://localhost:8080/swagger-ui.html</code></p>
 
 <h2>License</h2>
 <p>This project is licensed under the MIT License.</p>
-
-</body>
-</html>
