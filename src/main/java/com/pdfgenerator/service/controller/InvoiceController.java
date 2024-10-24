@@ -24,16 +24,13 @@ import com.pdfgenerator.service.service.PdfService;
 @RequestMapping("/api/pdf")
 public class InvoiceController {
 
-    // Inject PdfService using @Autowired
     @Autowired
-    private PdfService pdfService;  // This is now an instance variable, not static
+    private PdfService pdfService;  
 
     @PostMapping("/generate")
     public ResponseEntity<?> generatePdf(@RequestBody InvoiceRequest invoiceRequest) {
-        // Call generatePdf on the instance of pdfService
-        String pdfPath = pdfService.generatePdf(invoiceRequest);
 
-        // Return the response
+        String pdfPath = pdfService.generatePdf(invoiceRequest);
         return ResponseEntity.ok("PDF generated at path: " + pdfPath);
     }
 
@@ -41,7 +38,6 @@ public class InvoiceController {
     public ResponseEntity<Resource> downloadPdf(@RequestParam String fileName) {
     	System.out.println(fileName);
     	
-        // Logic for downloading PDF
         File file = new File("pdf-storage/" + fileName);
         
         System.out.println(file);
